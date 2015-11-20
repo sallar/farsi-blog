@@ -68,7 +68,11 @@ theme: sallar
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: rsync
+  host: 178.62.172.234
+  port: 22
+  user: root
+  root: /var/www/sallar.me/farsi-static/farsi
 
 # RSS
 feed:

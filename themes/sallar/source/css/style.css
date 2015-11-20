@@ -1133,9 +1133,6 @@ footer {
       color: #fff;
       border-bottom: 1px dotted #dedede; }
   footer .copyright {
-    /*margin-top: scale(1);
-        border-top: 1px dotted $gray;
-        padding: scale(1) 0;*/
     text-align: center;
     font-size: 18px;
     line-height: 1.4;
@@ -1143,23 +1140,6 @@ footer {
     footer .copyright p {
       margin-bottom: 0; }
 
-.really_simple_share {
-  text-align: center;
-  overflow: hidden;
-  display: none; }
-  .really_simple_share > div {
-    display: inline-block !important;
-    float: none !important;
-    height: 20px !important; }
-
 #disqus_thread {
   margin-bottom: -2.617924rem;
   margin-top: 2.617924rem; }
-
-.c {
-  position: fixed;
-  bottom: 10px;
-  right: 20px; }
-  @media screen and (max-width: 67em) {
-    .c {
-      display: none; } }

@@ -567,10 +567,6 @@ footer{
     }
 
     .copyright{
-        //clear: both;
-        /*margin-top: scale(1);
-        border-top: 1px dotted $gray;
-        padding: scale(1) 0;*/
         text-align: center;
         font-size: 18px;
         line-height: 1.4;
@@ -582,35 +578,9 @@ footer{
     }
 }
 
-// Social
-// ------------------------------------------------------
-.really_simple_share{
-    text-align: center;
-    overflow: hidden;
-    display: none;
-
-    & > div{
-        display: inline-block !important;
-        float: none !important;
-        height: 20px !important;
-    }
-}
-
 // Comments
 // --------------------------------------------------------
 #disqus_thread{
     margin-bottom: -(scale(2));
     margin-top: scale(2);
-}
-
-// Ads
-// --------------------------------------------------------
-.c{
-    position: fixed;
-    bottom: 10px;
-    right: 20px;
-
-    @include responsive(67em){
-        display: none;
-    }
 }
