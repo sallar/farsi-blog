@@ -6,12 +6,6 @@
  * 
  */
 
-// Imports
-// ------------------------------------------------------
-@import "vendor/bourbon/bourbon";
-@import "vendor/normalize";
-@import "vendor/pretty";
-
 // Variables
 // ------------------------------------------------------
 $fontSize  : 20px;
@@ -20,6 +14,13 @@ $black     : #222;
 $blue      : #2980B9;
 $gray      : #777;
 $grayLight : #dedede;
+
+// Imports
+// ------------------------------------------------------
+@import "vendor/bourbon/bourbon";
+@import "vendor/normalize";
+@import "vendor/pretty";
+@import "vendor/share-button";
 
 // Mixins
 // ------------------------------------------------------
@@ -359,6 +360,11 @@ header{
             color: $gray;
         }
         .content{
+
+            &.content--page {
+                margin-top: scale(1);
+            }
+
             hr{
                 width: 30%;
                 margin: 3em auto;
@@ -449,25 +455,6 @@ header{
 
             .share{
                 margin-top: 5px;
-
-                .really_simple_share{
-                    display: block !important;
-                }
-
-                .link{
-                    @include transition(border-color .3s ease, color .3s ease);
-                    display: inline-block;
-                    border: 2px solid darken($grayLight, 8%);
-                    padding: 0 10px;
-                    border-radius: 2px;
-                    color: darken($grayLight, 35%);
-                    font-size: .95em;
-
-                    &:hover{
-                        color: $black;
-                        border-color: $gray;
-                    }
-                }
             }
         }
     }
@@ -517,10 +504,10 @@ header{
 // ------------------------------------------------------
 footer{
     background-color: darken($gray, 10%);
-    padding: scale(1) 0 0;
+    padding: scale(2) 0;
     color: #fff;
 
-    nav{
+    /*nav{
         @include clearfix;
 
         ul{
@@ -568,7 +555,7 @@ footer{
                 }
             }
         }
-    }
+    }*/
 
     a{
         color: #fff;
@@ -581,9 +568,9 @@ footer{
 
     .copyright{
         //clear: both;
-        margin-top: scale(1);
+        /*margin-top: scale(1);
         border-top: 1px dotted $gray;
-        padding: scale(1) 0;
+        padding: scale(1) 0;*/
         text-align: center;
         font-size: 18px;
         line-height: 1.4;

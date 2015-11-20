@@ -6,7 +6,7 @@
     var title = page.title;
 
     if (is_archive()){
-        title = 'Archives';
+        title = 'بایگانی';
 
         if (is_month()){
             title += ': ' + page.year + '/' + page.month;
@@ -14,9 +14,9 @@
             title += ': ' + page.year;
         }
     } else if (is_category()){
-        title = 'Category: ' + page.category;
+        title = 'دسته: ' + page.category;
     } else if (is_tag()){
-        title = 'Tag: ' + page.tag;
+        title = 'تگ: ' + page.tag;
     }
     %>
     <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
@@ -25,10 +25,7 @@
     <% if (theme.rss){ %>
         <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
     <% } %>
-    <% if (theme.favicon){ %>
-        <link rel="icon" href="<%- theme.favicon %>">
-    <% } %>
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <% if (theme.favicon){ %><!--<link rel="icon" href="<%- theme.favicon %>">--><% } %>
     <%- css('css/style') %>
     <%- partial('google-analytics') %>
 </head>

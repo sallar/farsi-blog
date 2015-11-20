@@ -3,9 +3,11 @@
 <% } %>
     <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
         <%- partial('post/title', {class_name: 'archive-article-title'}) %>
-        <%- partial('post/date', {class_name: 'archive-article-date', date_format: null}) %>
+        <% if (typeof isPage === "undefined") { %>
+            <%- partial('post/date', {class_name: 'archive-article-date', date_format: null}) %>
+        <% } %>
 
-        <section class="content">
+        <section class="content <%= (typeof isPage !== "undefined") ? 'content--page' : '' %>">
             <% if (post.excerpt && index){ %>
                 <%- post.excerpt %>
                 <% if (theme.excerpt_link){ %>
@@ -18,11 +20,13 @@
             <% } %>
         </section>
 
-        <% if (!index){ %>
+        <% if (!index && typeof isPage === "undefined"){ %>
             <section class="meta">
                 <hr>
                 <%- partial('post/category') %>
-                <section class="share"><a href="#" class="link">به اشتراک بگذارید</a></section>
+                <section class="share">
+                    <share-button></share-button>
+                </section>
             </section>
 
             <% if (!index && post.comments && config.disqus_shortname){ %>
