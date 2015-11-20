@@ -1,0 +1,15 @@
+<!-- Header -->
+<header>
+    <nav class="container">
+        <ul>
+            <% for (var i in theme.menu){ %>
+                <li><a href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
+            <% } %>
+            <li class="logo"><a href="/">- سالار‌کابلی -</a></li>
+            <li><a href="http://ir.linkedin.com/in/sallarkaboli" target="_blank">لینکدین</a></li>
+            <li><a href="http://www.crunchbase.com/person/sallarkaboli" target="_blank">کرانچ‌بیس</a></li>
+            <li><a href="http://feeds.feedburner.com/sallar" target="_blank">خوراک</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- /Header -->

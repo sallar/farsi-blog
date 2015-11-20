@@ -1,0 +1,42 @@
+<%- partial('_partial/intro') %>
+<% if (pagination == 2){ %>
+    <section id="content" class="container">
+        <% page.posts.each(function(post){ %>
+            <%- partial('article', {post: post, index: true}) %>
+        <% }) %>
+    </section>
+    <% if (page.total > 1){ %>
+    <!-- Paging -->
+    <section id="pager">
+        <nav class="container">
+            <%- paginator({
+                prev_text: '<span>نوشته‌های تازه‌تر </span><i>←</i>',
+                next_text: '<i>→</i><span> نوشته‌های کهنه‌تر</span>'
+            }) %>
+        </nav>
+    </section>
+    <!-- /Paging -->
+    <% } %>
+<% } else { %>
+    <section id="content" class="container">
+    <% var last; %>
+    <% page.posts.each(function(post, i){ %>
+        <% var year = post.date.year(); %>
+        <% if (last != year){ %>
+            <% if (last != null){ %>
+                </div></section>
+            <% } %>
+            <% last = year; %>
+            <section class="archives-wrap">
+                <div class="archive-year-wrap">
+                    <a href="<%- url_for('archives/' + year) %>" class="archive-year"><%= jdate(post.date, 'YYYY') %></a>
+                </div>
+                <div class="archives">
+        <% } %>
+        <%- partial('article', {post: post, even: i % 2 == 0}) %>
+    <% }) %>
+    <% if (page.posts.length){ %>
+        </div></section>
+    <% } %>
+    </section>
+<% } %>

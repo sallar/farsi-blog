@@ -1,0 +1,17 @@
+# Header
+menu:
+  صفحه اول: /
+  بلاگ: /farsi
+  تماس: /farsi/contact
+rss: http://feeds.feedburner.com/sallar
+
+# Content
+excerpt_link: بیشتر بخوانید
+
+# Miscellaneous
+google_analytics: UA-19357592-1
+favicon: /favicon.png
+twitter: sallar
+google_plus:
+fb_admins:
+fb_app_id:

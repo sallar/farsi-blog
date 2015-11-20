@@ -1,0 +1,60 @@
+<!-- /Content -->
+<!-- Footer -->
+<footer>
+    <section class="container">
+        <nav>
+            <ul>
+                <li class="header">دسته‌ها</li>
+                <li><a href="/category/works/">نمونه‌کارها</a></li>
+                <li><a href="/category/notes/">یادداشت‌ها</a></li>
+                <li><a href="/category/typography/">تایپوگرافی</a></li>
+                <li><a href="/category/ui/">طراحی رابط کاربری</a></li>
+                <li><a href="/category/development/">توسعه وب</a></li>
+                <li><a href="/category/tutorials/">آموزش</a></li>
+            </ul>
+            <ul>
+                <li class="header">پروژه‌ها</li>
+                <li><a href="https://acop.io" target="_blank">آکوپیو</a></li>
+                <li><a href="/projects/jdatetime/">کلاس تاریخ جلالی</a></li>
+                <li><a href="/projects/phoenix-url-shortener/">کوتاه‌کننده آدرس ققنوس</a></li>
+                <li><a href="http://negaresh.org/" target="_blank">نگارش</a></li>
+                <li><a href="http://baaemail.com" target="_blank">باایمیل</a></li>
+            </ul>
+            <ul>
+                <li class="header">در وب</li>
+                <li><a href="http://www.crunchbase.com/person/sallarkaboli" target="_blank">پروفایل کرانچ‌بیس</a></li>
+                <li><a href="https://twitter.com/sallar" target="_blank">توییتر</a></li>
+                <li><a href="https://github.com/sallar" target="_blank">پروژه‌ها در گیت‌هاب</a></li>
+                <li><a href="http://be.net/sallar" target="_blank">نمونه‌کارها در بیهنس</a></li>
+                <li><a href="https://facebook.com/sallar.kaboli" target="_blank">صفحه فیسبوک</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section class="copyright">
+        <p class="container">
+            کپی‌رایت ۱۳۸۴-۱۳۹۴.<span class="hide-on-mobile"> تمام حقوق محفوظ است.</span> طراحی شده در ایران.<br />
+            مطالب تحت لیسانس <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" target="_blank">کریتیو کامنز</a> منتشر می‌شوند.
+        </p>
+    </section>
+</footer>
+<!-- /Footer -->
+
+<% if (config.disqus_shortname){ %>
+<script>
+    var disqus_shortname = '<%= config.disqus_shortname %>';
+    <% if (page.permalink){ %>
+    var disqus_url = '<%= page.permalink %>';
+    <% } %>
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<% } %>
+
+<!-- Scripts -->
+<%- js(['js/prettify/prettify.js', 'js/run.js']) %>
+<!-- /Scripts -->

@@ -1,0 +1,10 @@
+{
+  "name": "hexo-theme-sallar",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-sass": "^1.1.0",
+    "load-grunt-tasks": "^3.3.0"
+  }
+}

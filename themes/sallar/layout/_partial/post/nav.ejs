@@ -1,0 +1,18 @@
+<% if (post.prev || post.next){ %>
+<!-- Paging -->
+<section id="pager">
+    <nav class="container">
+        <% if (post.prev){ %>
+        <a href="<%- url_for(post.prev.path) %>" id="article-nav-newer" class="article-nav-link-wrap" rel="prev">
+            <span><%= post.prev.title %> </span><i>←</i>
+        </a>
+        <% } %>
+        <% if (post.next){ %>
+        <a href="<%- url_for(post.next.path) %>" id="article-nav-newer" class="article-nav-link-wrap" rel="next">
+            <i>→</i><span> <%= post.next.title %> </span>
+        </a>
+        <% } %>
+    </nav>
+</section>
+<!-- /Paging -->
+<% } %>
