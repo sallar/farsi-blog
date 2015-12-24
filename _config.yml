@@ -72,7 +72,7 @@ deploy:
   host: 178.62.172.234
   port: 22
   user: root
-  root: /var/www/sallar.me/farsi-static/farsi
+  root: /var/www/sallar.me/farsi-static
 
 # RSS
 feed:
