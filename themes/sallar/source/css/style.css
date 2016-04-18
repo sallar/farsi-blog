@@ -4,7 +4,7 @@
  * Published under MIT License.
  * Designed and Developed by Sallar Kaboli (sallar.kaboli@gmail.com)
  * Contains "Normalize.css" (MIT Licensed).
- * 
+ *
  */
 /* normalize.css v2.1.2 | MIT License | git.io/normalize */
 /* ==========================================================================
@@ -1015,12 +1015,14 @@ header {
       font-size: 1.4em;
       margin-bottom: 5px;
       color: #3c3c3c; }
-    #content article .content p img {
+    #content article .content p img, #content article .content > img {
       display: block;
       margin-left: auto;
       margin-right: auto;
       max-width: 100%;
       height: auto; }
+    #content article .content > img {
+      margin-bottom: 1em; }
     #content article .content h3 {
       font-size: 1.2em;
       color: #484848; }
