@@ -1,5 +1,10 @@
 Sallar.me Farsi Blog
 ===
+
+:warning: **Deprecated in favor of [sallar/sallar.me](https://github.com/sallar/sallar.me). This repo is no longer active.**
+
+* * *
+
 This is the source code of my [blog in Farsi (Persian)](http://sallar.me/blog). The blog is based on [Hexo](http://hexo.io/)
 with a custom design.
 
